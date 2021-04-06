@@ -6,16 +6,6 @@ WORKDIR /home/dst
 
 COPY requirements.txt requirements.txt
 
-# for python 3.9
-# RUN apt update
-# RUN apt install software-properties-common -y 
-# RUN add-apt-repository ppa:deadsnakes/ppa -y
-# RUN apt update
-# RUN apt install python3.9 python3.9-venv python3.9-dev python3-pip curl -y
-# RUN curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-# RUN python3.9 get-pip.py
-# RUN pip install -r requirements.txt
-
 RUN apt update
 RUN apt install python3-pip -y
 RUN pip3 install -r requirements.txt
